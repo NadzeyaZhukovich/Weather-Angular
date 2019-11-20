@@ -1,0 +1,32 @@
+@import '../../assets/project-color';
+
+.today-weather {
+  width: 50%;
+  height: 200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+
+  &__item {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: $white;
+    line-height: 25px;
+  }
+
+  &__icon {
+    width: 150px;
+    height: 150px;
+  }
+
+  &__city {
+    font-size: 150%;
+  }
+
+  &__temperature {
+    font-size: 200%;
+  }
+}
