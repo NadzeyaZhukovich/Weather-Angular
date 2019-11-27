@@ -1,4 +1,4 @@
 <div class="content">
-  <app-search></app-search>
-  <app-today-weather></app-today-weather>
+  <app-search (weatherDataEmitter)="weatherDescription($event)"></app-search>
+  <app-today-weather [displayWeatherData]="weatherData"></app-today-weather>
 </div>
