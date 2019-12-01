@@ -9,9 +9,9 @@ import {WeatherData} from '../model/weatherData';
 export class DataService {
 
   private generateWeatherUrl(units: TemperatureUnits, cityName: string) {
-    return `https://api.openweathermap.org/data/2.5/weather?q=${cityName}
-      &units=${units}
-      &appid=${environment.apiKey}`;
+    return `https://api.openweathermap.org/data/2.5/weather?q=${cityName}`
+      + `&units=${units}`
+      + `&appid=${environment.apiKey}`;
   }
 
   private fetchData(url: string): Promise<WeatherData> {
@@ -21,10 +21,10 @@ export class DataService {
   }
 
   private mapToWeatherData(data): WeatherData {
-
     return new WeatherData(
       data.name,
       data.main.temp,
+      data.weather[0].id,
       data.weather[0].description,
       data.main.humidity,
       data.wind.speed,

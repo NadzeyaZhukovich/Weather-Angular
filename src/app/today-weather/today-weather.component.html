@@ -2,7 +2,7 @@
   <div class="today-weather"
    *ngIf="displayWeatherData !== undefined;">
     <div class="today-weather__item">
-      <img class="today-weather__icon" src="../assets/img/2882343%20-%20leaves%20in%20wind%20pleasant%20weather%20spring%20season%20symbol%20spring%20winds%20weather.svg">
+      <img class="today-weather__icon" src="{{displayWeatherData.getIconPath()}}">
       <div class="today-weather__temperature"> {{displayWeatherData.temperature}}&deg;С</div>
     </div>
     <div class="today-weather__item">

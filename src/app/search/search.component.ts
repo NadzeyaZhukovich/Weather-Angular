@@ -14,7 +14,7 @@ export class SearchComponent {
   @Output() weatherDataEmitter: EventEmitter<WeatherData> = new EventEmitter<WeatherData>();
 
   searchCityBtn(event) {
-    this.dataService.getWeatherData(TemperatureUnits.getFahrenheit(), this.cityName)
+    this.dataService.getWeatherData(TemperatureUnits.getCelsius(), this.cityName)
       .then((data) => {
         this.weatherDataEmitter.emit(data);
       });
