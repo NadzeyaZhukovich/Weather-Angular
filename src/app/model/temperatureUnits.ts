@@ -1,4 +1,9 @@
 export class TemperatureUnits {
-    static CELSIUS: 'metric';
-    static FAHRENHEIT: 'imperial';
+  static getCelsius() {
+    return 'metric';
+  }
+
+  static getFahrenheit() {
+    return 'imperial';
+  }
 }

@@ -1,0 +1,21 @@
+<section class="section">
+  <div class="today-weather"
+   *ngIf="displayWeatherData !== undefined;">
+    <div class="today-weather__item">
+      <img class="today-weather__icon" src="{{displayWeatherData.getIconPath()}}">
+      <div class="today-weather__temperature"> {{displayWeatherData.temperature}}&deg;С</div>
+    </div>
+    <div class="today-weather__item">
+      <div class="today-weather__data">
+        <p class="today-weather__city">{{displayWeatherData.cityName}}</p>
+        <p class="today-weather__date">{{displayWeatherData.date}}</p>
+        <p class="today-weather__info">{{displayWeatherData.weatherDescription}}</p>
+      </div>
+      <div class="today-weather__description">
+        <p class="today-weather__wind"> wind: {{displayWeatherData.wind}} km/h</p>
+        <p class="today-weather__humidity"> humidity: {{displayWeatherData.humidity}} %</p>
+        <p class="today-weather__wind"> pressure: {{displayWeatherData.pressure}} hPa</p>
+      </div>
+    </div>
+  </div>
+</section>
