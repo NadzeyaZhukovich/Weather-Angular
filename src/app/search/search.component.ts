@@ -18,5 +18,6 @@ export class SearchComponent {
       .then((data) => {
         this.weatherDataEmitter.emit(data);
       });
+    this.cityName = '';
   }
 }

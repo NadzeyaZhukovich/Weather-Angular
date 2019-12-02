@@ -35,10 +35,31 @@ export class WeatherData {
 
   getIconPath(): string {
     let weatherIcon;
-    if (this.weatherId >= 700 && this.weatherId < 800) {
-      weatherIcon = 'wind';
-    } else {
-      weatherIcon = 'cloud';
+    switch (true) {
+      case (this.weatherId < 300) :
+        weatherIcon = 'thunderstorm';
+        break;
+      case (this.weatherId < 400) :
+        weatherIcon = 'rain';
+        break;
+      case (this.weatherId < 600) :
+        weatherIcon = 'shower-rain-day';
+        break;
+      case (this.weatherId < 700) :
+        weatherIcon = 'snow';
+        break;
+      case (this.weatherId < 800) :
+        weatherIcon = 'mist';
+        break;
+      case (this.weatherId === 800) :
+        weatherIcon = 'clear-sky-day';
+        break;
+      case (this.weatherId < 900) :
+        weatherIcon = 'few-clouds-day';
+        break;
+      default:
+        weatherIcon = 'none';
+        break;
     }
     return `../assets/img/${weatherIcon}.svg`;
   }
