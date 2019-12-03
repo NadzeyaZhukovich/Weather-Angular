@@ -16,9 +16,6 @@
 
     @include _768 {
       margin-bottom: 2%;
-    }
-
-    @include _625 {
       flex-direction: column;
       width: 100%;
     }
@@ -32,7 +29,7 @@
       margin-left: 9%;
     }
 
-    @include _625 {
+    @include _768 {
       width: 100%;
       margin-left: 0;
       text-align: center;
@@ -43,7 +40,7 @@
     width: 50%;
     text-align: right;
 
-    @include _625 {
+    @include _768 {
       width: 100%;
       text-align: center;
     }
@@ -53,11 +50,11 @@
     width: 60%;
     height: auto;
 
-    @include _768 {
-      width: 70%;
-    }
+    //@include _768 {
+    //  width: 70%;
+    //}
 
-    @include _625 {
+    @include _768 {
       width: 40%;
     }
   }
@@ -66,7 +63,7 @@
     font-size: 150%;
     margin-bottom: 2.1%;
 
-    @include _625 {
+    @include _768 {
       margin: 4% 0;
     }
   }
@@ -76,7 +73,7 @@
     width: 50%;
     text-align: right;
 
-    @include _481 {
+    @include _768 {
       text-align: center;
       width: 100%;
       margin: 2% 0;
