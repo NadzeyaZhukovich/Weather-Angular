@@ -1,9 +1,18 @@
-@import '../../assets/project-color';
+@import '../../assets/styles/project-color';
+@import '../../assets/styles/responsive-mixin';
 
 .search-form {
   position: relative;
   width: 50%;
   margin: 0 auto;
+
+  @include _1200 {
+     width: 65%;
+   }
+
+  @include _1024 {
+    width: 80%;
+  }
 
   &__input {
     width: 100%;
@@ -11,11 +20,15 @@
     border: 1px solid $white;
     border-radius: 50px;
     padding: 5px 50px 5px 20px;
-    font-size: 80%;
+    font-size: 60%;
     color: $white;
     outline: none;
     background: transparent;
     box-sizing: border-box;
+
+    @include _625 {
+      height: 35px;
+    }
   }
 
   &__input::placeholder {
@@ -26,13 +39,28 @@
     outline: none;
     border-style: none;
     border-radius: 50px;
-    height: 45px;
-    width: 45px;
+    height: 40px;
+    width: 40px;
     margin-right: 10px;
     background: transparent;
     position: absolute;
     cursor: pointer;
-    top: 0;
+    top: 5px;
     right: 0;
+
+    @include _1024 {
+      top: 3px;
+    }
+
+    @include _625 {
+      height: 35px;
+      width: 35px;
+    }
+  }
+
+  &__button:hover {
+    svg {
+      fill: #086c9f;
+    }
   }
 }
