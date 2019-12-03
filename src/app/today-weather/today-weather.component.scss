@@ -1,4 +1,5 @@
-@import '../../assets/project-color';
+@import '../../assets/styles/project-color';
+@import '../../assets/styles/responsive-mixin';
 
 .today-weather {
   display: flex;
@@ -8,37 +9,81 @@
 
   &__item {
     display: flex;
-    width: 50%;
+    width: 60%;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1.5%;
-    font-size: 80%;
+    margin-bottom: 1.3%;
+
+    @include _768 {
+      margin-bottom: 2%;
+    }
+
+    @include _481 {
+      flex-direction: column;
+      width: 100%;
+    }
   }
 
   &__description {
-    margin-left: 7%;
+    margin-left: 6%;
     width: 50%;
+
+    @include _1024 {
+      margin-left: 9%;
+    }
+
+    @include _481 {
+      width: 100%;
+      margin-left: 0;
+      text-align: center;
+    }
   }
 
   .icon__box {
     width: 50%;
     text-align: right;
+
+    @include _481 {
+      width: 100%;
+      text-align: center;
+    }
   }
 
   &__icon {
-    width: 50%;
+    width: 60%;
     height: auto;
 
+    @include _768 {
+      width: 70%;
+    }
+
+    @include _625 {
+      width: 80%;
+    }
+
+    @include _481 {
+      width: 70%;
+    }
   }
 
   &__city {
     font-size: 150%;
     margin-bottom: 2.1%;
+
+    @include _481 {
+      margin: 4% 0;
+    }
   }
 
   &__temperature {
     font-size: 200%;
     width: 50%;
     text-align: right;
+
+    @include _481 {
+      text-align: center;
+      width: 100%;
+      margin: 2% 0;
+    }
   }
 }
