@@ -7,7 +7,7 @@
 
   &__input {
     width: 100%;
-    height: 45px;
+    height: 40px;
     border: 1px solid $white;
     border-radius: 50px;
     padding: 5px 50px 5px 20px;
@@ -26,13 +26,19 @@
     outline: none;
     border-style: none;
     border-radius: 50px;
-    height: 45px;
-    width: 45px;
+    height: 40px;
+    width: 40px;
     margin-right: 10px;
     background: transparent;
     position: absolute;
     cursor: pointer;
     top: 0;
     right: 0;
+  }
+
+  &__button:hover {
+    svg {
+      fill: #086c9f;
+    }
   }
 }

@@ -1,32 +1,44 @@
 @import '../../assets/project-color';
 
 .today-weather {
-  width: 50%;
-  height: 200px;
-  margin: 0 auto;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  color: $white;
+  align-items: center;
 
   &__item {
-    width: 40%;
     display: flex;
-    flex-direction: column;
+    width: 50%;
     align-items: center;
-    justify-content: space-between;
-    color: $white;
-    line-height: 25px;
+    justify-content: center;
+    margin-bottom: 1.5%;
+    font-size: 80%;
+  }
+
+  &__description {
+    margin-left: 7%;
+    width: 50%;
+  }
+
+  .icon__box {
+    width: 50%;
+    text-align: right;
   }
 
   &__icon {
-    width: 150px;
-    height: 150px;
+    width: 50%;
+    height: auto;
+
   }
 
   &__city {
     font-size: 150%;
+    margin-bottom: 2.1%;
   }
 
   &__temperature {
     font-size: 200%;
+    width: 50%;
+    text-align: right;
   }
 }
