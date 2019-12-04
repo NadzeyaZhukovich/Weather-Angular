@@ -1,6 +1,27 @@
-# WeatherAngular
+# Weather Forecast
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.
+
+## Features
+
+ * Displayed weather info by city name
+ 
+## Frameworks and Tools
+ 
+ * TypeScript
+ * Angular 8
+ * SASS
+
+## What to improve?
+
+ * Add Unit tests
+ * Add UI tests
+ * Add integration with CI 
+ * Move to RxJS
+ * Add weather info for next five days
+ * Add toggle for temperature (fahrenheit and celsius)
+ * Improve error handling
+ * Add animations 
 
 ## Development server
 
