@@ -21,16 +21,11 @@ export class WeatherData {
     this.cityName = cityName;
     this.temperature = temperature;
     this.weatherId = weatherId;
-    this.weatherDescription = weatherDescription;
+    this.weatherDescription = this.getStringWithFirstCapitalLetter(weatherDescription);
     this.humidity = humidity;
     this.wind = wind;
     this.pressure = pressure;
     this.date = this.getHumanReadableDate(date);
-  }
-
-  getHumanReadableDate(date): string {
-    const stringDate = new Date(date * 1000);
-    return stringDate.toDateString();
   }
 
   getIconPath(): string {
@@ -62,5 +57,14 @@ export class WeatherData {
         break;
     }
     return `../assets/img/${weatherIcon}.svg`;
+  }
+
+  private getHumanReadableDate(date): string {
+    const stringDate = new Date(date * 1000);
+    return stringDate.toDateString();
+  }
+
+  private getStringWithFirstCapitalLetter(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
   }
 }
