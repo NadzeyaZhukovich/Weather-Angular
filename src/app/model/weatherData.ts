@@ -21,7 +21,7 @@ export class WeatherData {
     this.cityName = cityName;
     this.temperature = temperature;
     this.weatherId = weatherId;
-    this.weatherDescription = this.firstLetterToUpperCase(weatherDescription);
+    this.weatherDescription = this.getStringWithFirstCapitalLetter(weatherDescription);
     this.humidity = humidity;
     this.wind = wind;
     this.pressure = pressure;
@@ -64,7 +64,7 @@ export class WeatherData {
     return stringDate.toDateString();
   }
 
-  private firstLetterToUpperCase(str) {
+  private getStringWithFirstCapitalLetter(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
   }
 }
