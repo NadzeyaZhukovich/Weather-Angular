@@ -1,0 +1,23 @@
+@import '../../assets/styles/project-color';
+@import '../../assets/styles/responsive-mixin';
+
+:host{
+  width: 20%;
+  background: linear-gradient(rgba(255, 255, 255, 0.3),rgba(255, 255, 255, 0.3));
+  padding: 1.5% 0.5%;
+}
+
+.weather-item {
+  font-size: 70%;
+  text-align: center;
+  color: $white;
+
+  &__icon {
+    margin-bottom: 10px;
+    width: 30%;
+  }
+
+  &__temperature {
+    margin-bottom: 10px;
+  }
+}
