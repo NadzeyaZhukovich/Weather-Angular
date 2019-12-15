@@ -11,7 +11,7 @@ import {WeatherData} from '../model/weatherData';
 export class SearchComponent {
   constructor(private dataService: DataService) { }
   cityName = '';
-  @Output() weatherDataEmitter: EventEmitter<WeatherData> = new EventEmitter<WeatherData>();
+  @Output() weatherDataEmitter: EventEmitter<Array<WeatherData>> = new EventEmitter<Array<WeatherData>>();
 
   searchCityBtn(event) {
     this.dataService.getWeatherData(TemperatureUnits.getCelsius(), this.cityName)

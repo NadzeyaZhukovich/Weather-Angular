@@ -9,7 +9,7 @@ import {WeatherData} from './model/weatherData';
 
 export class AppComponent {
   weatherData;
-  weatherDescription(data: WeatherData) {
+  weatherDescription(data: Array<WeatherData>) {
     this.weatherData = data;
   }
 }
