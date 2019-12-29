@@ -1,5 +1,5 @@
 <div class="weather-item">
-  <img class="weather-item__icon" src="../../assets/img/snow.svg">
-  <p class="weather-item__temperature"> 10C </p>
-  <p class="weather-item__date"> Oct-27, 2019-Sum </p>
+  <img class="weather-item__icon" src="{{weather.getIconPath()}}">
+  <p class="weather-item__temperature">{{weather.temperature}} &deg;С</p>
+  <p class="weather-item__date"> {{weather.getHumanReadableDate()}}</p>
 </div>

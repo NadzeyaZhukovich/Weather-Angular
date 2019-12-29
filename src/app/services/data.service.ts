@@ -17,7 +17,7 @@ export class DataService {
   private fetchData(url: string): Promise<any> {
     return fetch(url)
       .then(response => response.json())
-      .then(data => data.list.map(weather => this.mapToWeatherData(weather)))
+      .then(data => data.list.map(weather => this.mapToWeatherData(weather, data.city.name)))
       .then(data => this.mapToNextDaysWeather(data, 5))
       .then(nextDaysWeather => this.mapToMiddayWeather(nextDaysWeather));
   }
@@ -80,9 +80,9 @@ export class DataService {
     return dayWeatherArray;
   }
 
-  private mapToWeatherData(data): WeatherData {
+  private mapToWeatherData(data, cityName): WeatherData {
     return new WeatherData(
-      data.name,
+      cityName,
       data.main.temp,
       data.weather[0].id,
       data.weather[0].description,

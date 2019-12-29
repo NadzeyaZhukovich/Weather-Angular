@@ -1,3 +1,6 @@
 <section class="weather-items-list section">
-  <app-weather-item></app-weather-item>
+  <app-weather-item *ngFor="let dayWeather of displayFourDaysWeatherData"
+    [weather]="dayWeather"
+  ></app-weather-item>
 </section>
+<!--[icon]="dayData."-->

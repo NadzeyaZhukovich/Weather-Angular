@@ -7,6 +7,6 @@ import {WeatherData} from '../model/weatherData';
   styleUrls: ['./today-weather.component.scss']
 })
 export class TodayWeatherComponent {
-  @Input() displayWeatherData: Array<WeatherData>;
+  @Input() displayWeatherData: WeatherData;
   constructor() { }
 }

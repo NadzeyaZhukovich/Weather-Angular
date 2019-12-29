@@ -1,5 +1,5 @@
 <div class="content">
   <app-search (weatherDataEmitter)="weatherDescription($event)"></app-search>
-  <app-today-weather [displayWeatherData]="weatherData"></app-today-weather>
-  <app-weather-items-list></app-weather-items-list>
+  <app-today-weather [displayWeatherData]="todayWeather"></app-today-weather>
+  <app-weather-items-list [displayFourDaysWeatherData]="nextFourDaysWeather"></app-weather-items-list>
 </div>

@@ -3,20 +3,20 @@
        *ngIf="displayWeatherData !== undefined;">
     <div class="today-weather__item">
       <div class="icon__box">
-        <img class="today-weather__icon" src="{{displayWeatherData[0].getIconPath()}}">
+        <img class="today-weather__icon" src="{{displayWeatherData.getIconPath()}}">
       </div>
       <div class="today-weather__description">
-        <p class="today-weather__city">{{displayWeatherData[0].cityName}}</p>
-        <p class="today-weather__date">{{displayWeatherData[0].getHumanReadableDate()}}</p>
-        <p class="today-weather__info">{{displayWeatherData[0].weatherDescription}}</p>
+        <p class="today-weather__city">{{displayWeatherData.cityName}}</p>
+        <p class="today-weather__date">{{displayWeatherData.getHumanReadableDate()}}</p>
+        <p class="today-weather__info">{{displayWeatherData.weatherDescription}}</p>
       </div>
     </div>
     <div class="today-weather__item">
-      <div class="today-weather__temperature"> {{displayWeatherData[0].temperature}} &deg;С</div>
+      <div class="today-weather__temperature"> {{displayWeatherData.temperature}} &deg;С</div>
       <div class="today-weather__description">
-        <p class="today-weather__wind"> wind: {{displayWeatherData[0].wind}} km/h</p>
-        <p class="today-weather__humidity"> humidity: {{displayWeatherData[0].humidity}} %</p>
-        <p class="today-weather__pressure"> pressure: {{displayWeatherData[0].pressure}} hPa</p>
+        <p class="today-weather__wind"> wind: {{displayWeatherData.wind}} km/h</p>
+        <p class="today-weather__humidity"> humidity: {{displayWeatherData.humidity}} %</p>
+        <p class="today-weather__pressure"> pressure: {{displayWeatherData.pressure}} hPa</p>
       </div>
     </div>
   </div>
