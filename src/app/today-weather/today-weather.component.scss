@@ -1,6 +1,17 @@
 @import '../../assets/styles/project-color';
 @import '../../assets/styles/responsive-mixin';
 
+
+:host {
+  height: 45%;
+  display: flex;
+  align-items: center;
+
+  @include _481 {
+    height: 50%;
+  }
+}
+
 .today-weather {
   display: flex;
   flex-direction: column;
@@ -12,71 +23,120 @@
     width: 60%;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1.3%;
 
-    @include _768 {
-      margin-bottom: 2%;
+    @include _481 {
       flex-direction: column;
-      width: 100%;
     }
   }
 
   &__description {
-    margin-left: 6%;
+    font-size: 90%;
+    margin-left: 4%;
     width: 50%;
 
-    @include _1024 {
-      margin-left: 9%;
+    @include _2560 {
+      font-size: 110%;
     }
 
-    @include _768 {
-      width: 100%;
+    @include _1200 {
+      font-size: 100%;
+    }
+
+    @include _850 {
+      font-size: 80%;
+    }
+
+    @include _625 {
+      font-size: 65%;
       margin-left: 0;
-      text-align: center;
+    }
+
+    @include _481 {
+      width: 90%;
+    }
+
+    .fas{
+      font-size: 60%;
+      width: 15px;
+
+      @include _2560 {
+        width: 30px;
+      }
     }
   }
 
   .icon__box {
     width: 50%;
-    text-align: right;
+    text-align: center;
 
-    @include _768 {
-      width: 100%;
-      text-align: center;
+    @include _481 {
+      width: 70%;
     }
   }
 
   &__icon {
-    width: 60%;
-    height: auto;
+    width: 80%;
 
-    //@include _768 {
-    //  width: 70%;
-    //}
+    @include _850 {
+      width: 60%;
+    }
 
-    @include _768 {
-      width: 40%;
+    @include _481 {
+      width: 100%;
     }
   }
 
   &__city {
-    font-size: 150%;
+    font-size: 120%;
     margin-bottom: 2.1%;
 
-    @include _768 {
-      margin: 4% 0;
+    @include _2560 {
+      font-size: 130%;
+    }
+
+    @include _1366 {
+      font-size: 145%;
+    }
+
+    @include _481 {
+      text-align: center;
+    }
+  }
+
+  &__info {
+    @include _481 {
+      text-align: center;
+      margin: 10px 0;
     }
   }
 
   &__temperature {
-    font-size: 200%;
+    font-size: 130%;
     width: 50%;
-    text-align: right;
+    text-align: center;
 
-    @include _768 {
-      text-align: center;
-      width: 100%;
-      margin: 2% 0;
+    @include _2560 {
+      font-size: 250%;
+    }
+
+    @include _1366 {
+      font-size: 150%;
+    }
+
+    @include _625 {
+      font-size: 100%;
+    }
+
+    @include _481 {
+      font-size: 90%;
     }
   }
+
+
+  @include _481 {
+    .hide {
+      display: none;
+    }
+  }
+
 }

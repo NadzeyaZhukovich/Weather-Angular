@@ -7,16 +7,16 @@
       </div>
       <div class="today-weather__description">
         <p class="today-weather__city">{{displayWeatherData.cityName}}</p>
-        <p class="today-weather__date">{{displayWeatherData.getHumanReadableDate()}}</p>
+        <p class="today-weather__date hide">{{displayWeatherData.getHumanReadableDate()}}</p>
         <p class="today-weather__info">{{displayWeatherData.weatherDescription}}</p>
       </div>
     </div>
     <div class="today-weather__item">
       <div class="today-weather__temperature"> {{displayWeatherData.temperature}} &deg;С</div>
-      <div class="today-weather__description">
-        <p class="today-weather__wind"> wind: {{displayWeatherData.wind}} km/h</p>
-        <p class="today-weather__humidity"> humidity: {{displayWeatherData.humidity}} %</p>
-        <p class="today-weather__pressure"> pressure: {{displayWeatherData.pressure}} hPa</p>
+      <div class="today-weather__description hide">
+        <p class="today-weather__wind"><i class="fas fa-wind"></i>  {{displayWeatherData.wind}} km/h</p>
+        <p class="today-weather__humidity"> <i class="fas fa-tint"></i> {{displayWeatherData.humidity}} %</p>
+        <p class="today-weather__pressure"> <i class="fas fa-weight"></i> {{displayWeatherData.pressure}} hPa</p>
       </div>
     </div>
   </div>
