@@ -10,12 +10,11 @@
   }
 }
 
-@mixin _768 {
-  @media only screen and (max-width: 768px) {
+@mixin _850 {
+  @media only screen and (max-width: 850px) {
     @content;
   }
 }
-
 @mixin _1024 {
   @media only screen and (max-width: 1024px) {
     @content;
@@ -27,3 +26,16 @@
     @content;
   }
 }
+
+@mixin _1366 {
+  @media only screen and (max-width: 1366px) {
+    @content;
+  }
+}
+
+@mixin _2560 {
+  @media only screen and (max-width: 2560px) {
+    @content;
+  }
+}
+

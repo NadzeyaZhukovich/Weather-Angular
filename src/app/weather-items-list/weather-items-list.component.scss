@@ -1,0 +1,24 @@
+@import '../../assets/styles/project-color';
+@import '../../assets/styles/responsive-mixin';
+
+
+:host {
+  height: 45%;
+  display: flex;
+  align-items: center;
+
+  @include _481 {
+    height: 39%;
+  }
+}
+
+.weather-items-list {
+  display: flex;
+  justify-content: space-around;
+
+  @include _481 {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+}

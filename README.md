@@ -1,6 +1,9 @@
 # Weather Forecast
+This is an Angular application which allows you to get weather for 5 days.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.
+<p align="center">
+  <img src="./art/app-demo.png" width="800px"/>
+</p>
 
 ## Features
 
