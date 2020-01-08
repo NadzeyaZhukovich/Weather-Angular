@@ -6,7 +6,7 @@ export class WeatherData {
   humidity: number;
   wind: number;
   pressure: number;
-  date: string;
+  date: Date;
 
   constructor(
     cityName: string,
@@ -16,7 +16,7 @@ export class WeatherData {
     humidity: number,
     wind: number,
     pressure: number,
-    date: string
+    date: Date
   ) {
     this.cityName = cityName;
     this.temperature = temperature;
@@ -25,7 +25,7 @@ export class WeatherData {
     this.humidity = humidity;
     this.wind = wind;
     this.pressure = pressure;
-    this.date = this.getHumanReadableDate(date);
+    this.date = date;
   }
 
   getIconPath(): string {
@@ -59,9 +59,8 @@ export class WeatherData {
     return `../assets/img/${weatherIcon}.svg`;
   }
 
-  private getHumanReadableDate(date): string {
-    const stringDate = new Date(date * 1000);
-    return stringDate.toDateString();
+   getHumanReadableDate(): string {
+    return this.date.toDateString();
   }
 
   private getStringWithFirstCapitalLetter(str) {

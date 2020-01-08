@@ -1,0 +1,8 @@
+<div class="weather-item">
+  <img class="weather-item__icon" src="{{weather.getIconPath()}}">
+  <p class="weather-item__temperature">{{weather.temperature}} &deg;С</p>
+  <p class="weather-item__date"> {{weather.getHumanReadableDate()}}</p>
+  <p class="weather-item__wind"><i class="fas fa-wind"></i> {{weather.wind}} km/h</p>
+  <p class="weather-item__humidity"><i class="fas fa-tint"></i> {{weather.humidity}} %</p>
+  <p class="weather-item__pressure"><i class="fas fa-weight"></i> {{weather.pressure}} hPa</p>
+</div>

@@ -8,8 +8,16 @@ import {WeatherData} from './model/weatherData';
 })
 
 export class AppComponent {
-  weatherData;
-  weatherDescription(data: WeatherData) {
-    this.weatherData = data;
+  todayWeather: WeatherData;
+  nextFourDaysWeather: Array<WeatherData>;
+
+  weatherDescription(data: Array<WeatherData>) {
+    const weatherArray = [...data];
+
+    // get today weather
+    this.todayWeather = weatherArray[0];
+    // remove first value and get next 4 days
+    weatherArray.shift();
+    this.nextFourDaysWeather = weatherArray;
   }
 }
