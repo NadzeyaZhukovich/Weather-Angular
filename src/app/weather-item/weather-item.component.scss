@@ -4,45 +4,31 @@
 :host {
   width: 20%;
   background: linear-gradient(rgba(255, 255, 255, 0.2),rgba(255, 255, 255, 0.2));
-  padding: 1% 0.5% 1.5%;
-
-  @include _2560 {
-    padding: 0 1% 1%;
-  }
-
-  @include _625 {
-    width: 23%;
-  }
+  padding: 1% 1.5% 1.5%;
 
   @include _481 {
     width: 100%;
+    padding: 0;
   }
 
 }
 
 .weather-item {
-  font-size: 50%;
+  font-size: 60%;
   text-align: center;
   color: $white;
 
-  @include _2560 {
-    font-size: 100%;
+  @include _1800 {
+    font-size: 80%;
   }
 
-  @include _1366 {
-    font-size: 70%;
-  }
-
-  @include _1024 {
-    font-size: 60%;
-  }
-
-  @include _850 {
+  @include _767 {
     font-size: 50%;
-    margin: 0 10px;
   }
 
   @include _481 {
+    font-size: 50%;
+    margin: 0 10px;
     display: flex;
     align-items: center;
   }
@@ -51,13 +37,10 @@
     margin-bottom: 5px;
     width: 40%;
 
-    @include _1366 {
-      width: 50%;
-    }
-
     @include _481 {
       width: 20%;
-      margin-left: 20px;
+      margin-left: 10px;
+      margin-bottom: 0;
     }
   }
 
@@ -65,14 +48,6 @@
     margin-bottom: 5px;
     text-align: center;
     margin-left: 20px;
-
-    @include _2560 {
-      font-size: 120%;
-    }
-
-    @include _1366 {
-      font-size: 110%;
-    }
 
     @include _481 {
       font-size: 130%;
@@ -98,10 +73,6 @@
     .fas {
       font-size: 70%;
       width: 12px;
-
-      @include _2560{
-        width: 30px;
-      }
     }
   }
 }
