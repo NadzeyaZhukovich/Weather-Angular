@@ -4,12 +4,17 @@
   }
 }
 
-@mixin _767 {
-  @media only screen and (max-width: 767px) {
+@mixin _625 {
+  @media only screen and (max-width: 625px) {
     @content;
   }
 }
 
+@mixin _850 {
+  @media only screen and (max-width: 850px) {
+    @content;
+  }
+}
 @mixin _1024 {
   @media only screen and (max-width: 1024px) {
     @content;
@@ -22,8 +27,15 @@
   }
 }
 
-@mixin _1800 {
-  @media only screen and (min-width: 1800px) {
+@mixin _1366 {
+  @media only screen and (max-width: 1366px) {
     @content;
   }
 }
+
+@mixin _2560 {
+  @media only screen and (max-width: 2560px) {
+    @content;
+  }
+}
+

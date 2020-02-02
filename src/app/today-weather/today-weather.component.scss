@@ -24,10 +24,6 @@
     align-items: center;
     justify-content: center;
 
-    @include _1800 {
-      width: 45%;
-    }
-
     @include _481 {
       flex-direction: column;
     }
@@ -38,8 +34,21 @@
     margin-left: 4%;
     width: 50%;
 
-    @include _1800 {
+    @include _2560 {
+      font-size: 110%;
+    }
+
+    @include _1200 {
       font-size: 100%;
+    }
+
+    @include _850 {
+      font-size: 80%;
+    }
+
+    @include _625 {
+      font-size: 65%;
+      margin-left: 0;
     }
 
     @include _481 {
@@ -49,6 +58,10 @@
     .fas{
       font-size: 60%;
       width: 15px;
+
+      @include _2560 {
+        width: 30px;
+      }
     }
   }
 
@@ -64,6 +77,10 @@
   &__icon {
     width: 80%;
 
+    @include _850 {
+      width: 60%;
+    }
+
     @include _481 {
       width: 100%;
     }
@@ -73,8 +90,12 @@
     font-size: 120%;
     margin-bottom: 2.1%;
 
-    @include _1800 {
-      font-size: 150%;
+    @include _2560 {
+      font-size: 130%;
+    }
+
+    @include _1366 {
+      font-size: 145%;
     }
 
     @include _481 {
@@ -94,8 +115,16 @@
     width: 50%;
     text-align: center;
 
-    @include _1800 {
-      font-size: 180%;
+    @include _2560 {
+      font-size: 250%;
+    }
+
+    @include _1366 {
+      font-size: 150%;
+    }
+
+    @include _625 {
+      font-size: 100%;
     }
 
     @include _481 {
@@ -103,9 +132,11 @@
     }
   }
 
+
   @include _481 {
     .hide {
       display: none;
     }
   }
+
 }
