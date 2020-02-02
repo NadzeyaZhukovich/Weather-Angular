@@ -12,8 +12,8 @@
   width: 65%;
   margin: 0 auto;
 
-  @include _2560 {
-    width: 45%;
+  @include _1800 {
+    width: 50%;
   }
 
   @include _481 {
